@@ -12,34 +12,24 @@ public class IcebergTrack {
 
     }
 
-    private final List<Iceberg> icebergs = new ArrayList<>();
-    private final List<IcebergPosition> positions = new ArrayList<>();
-    private final List<IcebergVolumen> volumen = new ArrayList<>();
+    private final List<IcebergData> icebergsData = new ArrayList<>();
 
     public IcebergTrack() {
-        icebergs.add(new Iceberg(1,"Cabo ABC", LocalDate.of(2017, Month.APRIL,1)));
-        icebergs.add(new Iceberg(2,"Puerto ABC", LocalDate.of(2018, Month.FEBRUARY,1)));
+        Iceberg iceberg1=new Iceberg(1,"Cabo ABC", LocalDate.of(2017, Month.APRIL,1));
+        Iceberg iceberg2= new Iceberg(2,"Puerto ABC", LocalDate.of(2018, Month.FEBRUARY,1));
 
-        positions.add(new IcebergPosition(LocalDate.of(2018,Month.APRIL,1),icebergs.get(0),"88ºN 24 E"));
-        positions.add(new IcebergPosition(LocalDate.of(2018,Month.JULY,1),icebergs.get(0),"88ºN 24 E"));
-        positions.add(new IcebergPosition(LocalDate.of(2019,Month.APRIL,1),icebergs.get(1),"88ºN 24 E"));
-        positions.add(new IcebergPosition(LocalDate.of(2019,Month.FEBRUARY,1),icebergs.get(1),"88ºN 24 E"));
+        icebergsData.add(new IcebergData(LocalDate.of(2018, Month.SEPTEMBER, 1),iceberg1,"88oN 24'E", 9e9));
+        icebergsData.add(new IcebergData(LocalDate.of(2018, Month.OCTOBER, 1),iceberg1,"80oN 12'E", 8e8));
+        icebergsData.add(new IcebergData(LocalDate.of(2018, Month.SEPTEMBER, 1),iceberg2,"77oS 02'W", 7e7));
+        icebergsData.add(new IcebergData(LocalDate.of(2018, Month.OCTOBER, 1),iceberg2,"78oS 03'W", 6.5e7));
+
+
     }
 
     private void output(){
-        for (Iceberg i : icebergs) {
-            System.out.println(i.toString());
+        for(IcebergData data : icebergsData){
+            System.out.println(data);
 
-            for (IcebergPosition p : positions) {
-                if (p.getIceberg().equals(i)){
-                    System.out.println(p.toString());
-                    for (IcebergVolumen v : volumen){
-                        if (v.getIceberg().equals(i)&& v.getDate().equals(p.getDate())){
-                            System.out.println(v);
-                        }
-                    }
-                }
-            }
         }
     }
 
