@@ -22,6 +22,7 @@ public class FileImageLoader implements ImageLoader {
         };
     }
 
+
     @Override
     public Image load() {
         return imageAt(0);

@@ -1,16 +1,21 @@
-package controller;
+package app;
 
 import java.io.File;
 import model.Image;
 import persistence.FileImageLoader;
+
 public class Main {
     public static void main(String[] args) {
+        new Main().executed();
+    }
+    void executed(){
         File file = new File("/Users/carlotapons/Desktop/Wallpaper/");
 
 
         FileImageLoader imageLoader = new FileImageLoader(file);
         Image image = imageLoader.load();
-        MainFrame mainFrame = new MainFrame();
-        mainFrame.getImageDisplay().show(image);
+        MainFrame mainFrame = new MainFrame(image);
+        mainFrame.executed();
     }
+
 }
