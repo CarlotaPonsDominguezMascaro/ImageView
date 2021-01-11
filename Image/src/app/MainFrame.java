@@ -1,8 +1,7 @@
 package app;
 
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.event.*;
 import java.util.HashMap;
 import javax.swing.*;
 
@@ -11,7 +10,6 @@ import control.NextImage;
 import control.PrevImage;
 import model.Image;
 import view.ImageDisplay;
-import view.SwingImageDisplay;
 
 public class MainFrame extends JFrame {
 
@@ -70,4 +68,43 @@ public class MainFrame extends JFrame {
     public ImageDisplay getImageDisplay() {
         return imageDisplay;
     }
+
+    private class MouseHandler implements MouseListener, MouseMotionListener{
+        boolean grab;
+        @Override
+        public void mouseClicked(MouseEvent e) {
+
+        }
+
+        @Override
+        public void mousePressed(MouseEvent e) {
+
+        }
+
+        @Override
+        public void mouseReleased(MouseEvent e) {
+
+        }
+
+        @Override
+        public void mouseEntered(MouseEvent e) {
+
+        }
+
+        @Override
+        public void mouseExited(MouseEvent e) {
+
+        }
+
+        @Override
+        public void mouseDragged(MouseEvent e) {
+
+        }
+
+        @Override
+        public void mouseMoved(MouseEvent e) {
+
+        }
+    }
+
 }

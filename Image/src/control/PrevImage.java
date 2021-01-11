@@ -1,7 +1,6 @@
 package control;
 
 import view.ImageDisplay;
-import view.SwingImageDisplay;
 
 public class PrevImage implements ChangeImage {
 

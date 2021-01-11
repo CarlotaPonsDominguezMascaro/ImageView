@@ -1,4 +1,4 @@
-package view;
+package app;
 
 
 import java.awt.Graphics;
@@ -7,6 +7,7 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 import javax.swing.JPanel;
 import model.Image;
+import view.ImageDisplay;
 
 public class SwingImageDisplay  extends JPanel implements ImageDisplay {
     private Image currentImage;
