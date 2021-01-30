@@ -1,13 +1,15 @@
 package model;
 
-
-import java.io.InputStream;
-
-public interface Image {
-    String name();
-    InputStream stream();
-    Image next();
-    Image prev();
+public class Image {
+    private final String name;
 
 
+
+    public Image(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
 }

@@ -1,11 +1,16 @@
 package view;
 
-
 import model.Image;
 
 public interface ImageDisplay {
+    void display(Image image);
+    Image currentImage();
+    void on(Shift shift);
 
-    Image current();
-    void show(Image image);
 
+
+    interface Shift{
+        Image left();
+        Image rigth();
+    }
 }
