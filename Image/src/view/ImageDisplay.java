@@ -8,6 +8,9 @@ public interface ImageDisplay {
     void on(Shift shift);
 
 
+    Image getImage();
+
+
 
     interface Shift{
         Image left();

@@ -65,6 +65,11 @@ public class ImagePanel extends JPanel implements ImageDisplay {
         this.shift = shift;
     }
 
+    @Override
+    public Image getImage() {
+        return this.image;
+    }
+
 
     private class MouseHandler implements MouseListener, MouseMotionListener {
         private int initial;
